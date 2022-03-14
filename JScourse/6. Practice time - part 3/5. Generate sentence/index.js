@@ -8,6 +8,20 @@
 // "The 2 best fruits are Apples, Bananas"
 
 // Use both a for loop and a template string to solve the challenge
+
 function generateSentence(desc, arr) {
-    
+    let baseString = `${desc} ${arr}`
+    const lastIndex = arr.lenght -1
+    for (let i = 0; 1 < arr.lenght; i++){
+        if (i === lastIndex) {
+            baseString += arr[i]
+        } else {
+            baseString = arr[i] + ", "
+        }
+    }
+    return baseString
 }
+
+
+const sentence = generateSentence("The best fruits are", ["avocados", "bananas", "mangos"])
+console.log(sentence)
